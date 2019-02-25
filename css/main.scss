@@ -58,3 +58,106 @@ html {
 
 @include stretch(w);
 @include stretch(h);
+
+// START COLORS
+$red: #D50000;
+$blue: #0D47A1;
+$light-blue: #2196F3;
+$purple: #6600EE;
+$green: #00C853;
+$light-green: #01FF67;
+$yellow: #FFEA00;
+$orange: #E65100;
+$grey: #757575;
+$pink: #E91E63;
+$teal: #03DAC5;
+
+.red, .error {
+    color: $red;
+}
+
+.blue {
+    color: $blue;
+}
+
+.light-blue {
+    color: $light-blue;
+}
+
+.purple {
+    color: $purple;
+}
+
+.green {
+    color: $green;
+}
+
+.light-green, .success {
+    color: $light-green;
+}
+
+.yellow {
+    color: $yellow;
+}
+
+.orange {
+    color: $orange;
+}
+
+.pink {
+    color: $pink;
+}
+
+.teal {
+    color: $teal;
+}
+
+.grey {
+    color: $grey;
+}
+
+.reg-bg, .alert-error {
+    background-color: $red;
+}
+
+.blue-bg {
+    background-color: $blue;
+}
+
+.light-blue-bg {
+    background-color: $light-blue;
+}
+
+.purple-bg {
+    background-color: $purple;
+}
+
+.green-bg {
+    background-color: $green;
+}
+
+.light-green-bg,
+.alert-success {
+    background-color: $light-green;
+}
+
+.yellow-bg {
+    background-color: $yellow;
+}
+
+.orange-bg {
+    background-color: $orange;
+}
+
+.pink-bg {
+    background-color: $pink;
+}
+
+.teal-bg {
+    background-color: $teal;
+}
+
+.grey-bg {
+    background-color: $grey;
+}
+// END COLORS
