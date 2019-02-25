@@ -1,3 +1,11 @@
+html {
+    box-sizing: border-box;
+}
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
 // START Grid
 .row {
     display: grid;
@@ -32,3 +40,21 @@
 // END GRID
 
 // UTILITY CLASSES
+
+.reset {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@mixin stretch($property) {
+    @for $i from 1 through 4 {
+        .#{$property}-#{$i * 25} {
+            @if $property == w {width: #{$i * 25%};}
+            @else if $property == h {height: #{$i * 25%};}
+        }
+        
+    }
+}
+
+@include stretch(w);
+@include stretch(h);

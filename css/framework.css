@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 .row {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -247,3 +255,41 @@
     grid-column: span 12;
   }
 }
+.reset {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-25 {
+  height: 25%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.h-75 {
+  height: 75%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+/*# sourceMappingURL=framework.css.map */
