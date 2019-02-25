@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    font-family: -apple-system, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
 }
 
   *, *:before, *:after {
@@ -161,3 +162,18 @@ $teal: #03DAC5;
     background-color: $grey;
 }
 // END COLORS
+
+
+// START FONT
+@mixin font-weight() {
+    @for $i from 1 through 9 {
+        .fw-#{$i * 100} {
+            font-weight: $i * 100;
+        }
+
+    }
+}
+
+@include font-weight();
+
+// END FONT
