@@ -1,0 +1,34 @@
+// START Grid
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+@mixin grid($property) {
+    @for $i from 1 through 12 {
+        .#{$property}-#{$i} {
+            grid-column: span $i;
+        }
+    }
+}
+
+@include grid(col);
+
+@media (min-width: 576px) {
+    @include grid(col-sm);
+}
+
+@media (min-width: 768px) {
+    @include grid(col-md);
+}
+
+@media (min-width: 992px) {
+    @include grid(col-lg);
+}
+
+@media (min-width: 1200px) {
+    @include grid(col-xl);
+}
+// END GRID
+
+// UTILITY CLASSES
