@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    font-family: -apple-system, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
 }
 
   *, *:before, *:after {
@@ -7,9 +8,52 @@ html {
 }
 
 // START Grid
+
+$quarter: 0.25rem;
+
 .row {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+}
+
+@mixin gap() {
+    @for $i from 1 through 8 {
+        .gutters-#{$i} {
+            grid-gap: $i * $quarter;
+        } 
+    }
+}
+
+@mixin gap-col() {
+    @for $i from 1 through 8 {
+        .gutters-col-#{$i} {
+            grid-column-gap: $i * $quarter;
+        } 
+    }
+}
+
+@mixin gap-row() {
+    @for $i from 1 through 8 {
+        .gutters-row-#{$i} {
+            grid-row-gap: $i * $quarter;
+        } 
+    }
+}
+
+@include gap();
+@include gap-col();
+@include gap-row();
+
+.no-gutters {
+    grid-gap: 0 !important;
+}
+
+.no-col-gutters {
+    grid-column-gap: 0 !important;
+}
+
+.no-row-gutters {
+    grid-row-gap: 0 !important;
 }
 
 @mixin grid($property) {
@@ -55,6 +99,45 @@ html {
         
     }
 }
+
+
+
+@mixin padding-left() {
+    @for $i from 1 through 10 {
+        .pl-#{$i} {
+            padding-left: $i * $quarter;
+        } 
+    }
+}
+
+@mixin padding-right() {
+    @for $i from 1 through 10 {
+        .pr-#{$i} {
+            padding-right: $i * $quarter;
+        } 
+    }
+}
+
+@mixin margin-left() {
+    @for $i from 1 through 10 {
+        .ml-#{$i} {
+            padding-left: $i * $quarter;
+        } 
+    }
+}
+
+@mixin margin-right() {
+    @for $i from 1 through 10 {
+        .mr-#{$i} {
+            padding-right: $i * $quarter;
+        } 
+    }
+}
+
+@include padding-left();
+@include padding-right();
+@include margin-left();
+@include margin-right();
 
 @include stretch(w);
 @include stretch(h);
@@ -116,7 +199,7 @@ $teal: #03DAC5;
     color: $grey;
 }
 
-.reg-bg, .alert-error {
+.red-bg, .alert-error {
     background-color: $red;
 }
 
@@ -161,3 +244,63 @@ $teal: #03DAC5;
     background-color: $grey;
 }
 // END COLORS
+
+
+// START FONT
+@mixin font-weight() {
+    @for $i from 1 through 9 {
+        .fw-#{$i * 100} {
+            font-weight: $i * 100;
+        }
+
+    }
+}
+
+@include font-weight();
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 500;
+}
+
+h1,
+.h1 {
+    font-size: 2.5rem;
+}
+
+h2,
+.h2 {
+    font-size: 2rem;
+}
+
+h3,
+.h3 {
+    font-size: 1.75rem;
+}
+
+h4,
+.h4 {
+    font-size: 1.5rem;
+}
+
+h5,
+.h5 {
+    font-size: 1.25rem;
+}
+
+h6,
+.h6 {
+    font-size: 1rem;
+}
+
+// END FONT
