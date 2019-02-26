@@ -2,20 +2,22 @@
 Errno::ENOENT: No such file or directory @ rb_sysopen - main.scss
 
 Backtrace:
-/home/adriaanbd/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:454:in `read'
-/home/adriaanbd/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:454:in `update_stylesheet'
-/home/adriaanbd/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/home/adriaanbd/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:209:in `each'
-/home/adriaanbd/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/home/adriaanbd/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:294:in `watch'
-/home/adriaanbd/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin.rb:109:in `method_missing'
-/home/adriaanbd/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/exec/sass_scss.rb:358:in `watch_or_update'
-/home/adriaanbd/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/home/adriaanbd/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/exec/base.rb:50:in `parse'
-/home/adriaanbd/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/exec/base.rb:18:in `parse!'
-/home/adriaanbd/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sass-3.7.3/bin/sass:13:in `<top (required)>'
-/home/adriaanbd/.rbenv/versions/2.6.1/bin/sass:23:in `load'
-/home/adriaanbd/.rbenv/versions/2.6.1/bin/sass:23:in `<main>'
+/Users/maya/.rvm/gems/ruby-2.5.3/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:454:in `read'
+/Users/maya/.rvm/gems/ruby-2.5.3/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:454:in `update_stylesheet'
+/Users/maya/.rvm/gems/ruby-2.5.3/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/maya/.rvm/gems/ruby-2.5.3/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/maya/.rvm/gems/ruby-2.5.3/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/maya/.rvm/gems/ruby-2.5.3/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:294:in `watch'
+/Users/maya/.rvm/gems/ruby-2.5.3/gems/sass-3.7.3/lib/sass/plugin.rb:109:in `method_missing'
+/Users/maya/.rvm/gems/ruby-2.5.3/gems/sass-3.7.3/lib/sass/exec/sass_scss.rb:358:in `watch_or_update'
+/Users/maya/.rvm/gems/ruby-2.5.3/gems/sass-3.7.3/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/maya/.rvm/gems/ruby-2.5.3/gems/sass-3.7.3/lib/sass/exec/base.rb:50:in `parse'
+/Users/maya/.rvm/gems/ruby-2.5.3/gems/sass-3.7.3/lib/sass/exec/base.rb:18:in `parse!'
+/Users/maya/.rvm/gems/ruby-2.5.3/gems/sass-3.7.3/bin/sass:13:in `<top (required)>'
+/Users/maya/.rvm/gems/ruby-2.5.3/bin/sass:23:in `load'
+/Users/maya/.rvm/gems/ruby-2.5.3/bin/sass:23:in `<main>'
+/Users/maya/.rvm/gems/ruby-2.5.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/maya/.rvm/gems/ruby-2.5.3/bin/ruby_executable_hooks:24:in `<main>'
 */
 body:before {
   white-space: pre;
