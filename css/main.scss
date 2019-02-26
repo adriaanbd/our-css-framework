@@ -183,6 +183,24 @@ $quarter: 0.25rem;
     }
 }
 
+@mixin padding-top-bottom() {
+    @for $i from 1 through 10 {
+        .py-#{$i} {
+            padding-top: $i * $quarter;
+            padding-bottom: $i * $quarter;
+        } 
+    }
+}
+
+@mixin padding-left-right() {
+    @for $i from 1 through 10 {
+        .px-#{$i} {
+            padding-left: $i * $quarter;
+            padding-right: $i * $quarter;
+        } 
+    }
+}
+
 @mixin padding-bottom() {
     @for $i from 1 through 10 {
         .pb-#{$i} {
@@ -238,18 +256,38 @@ $quarter: 0.25rem;
         } 
     }
 }
+@mixin margin-left-right() {
+    @for $i from 1 through 10 {
+        .mx-#{$i} {
+            margin-left: $i * $quarter;
+            margin-right: $i * $quarter;
+        } 
+    }
+}
+
+@mixin margin-top-bottom() {
+    @for $i from 1 through 10 {
+        .my-#{$i} {
+            margin-top: $i * $quarter;
+            margin-bottom: $i * $quarter;
+        } 
+    }
+}
 
 @include padding();
 @include padding-top();
 @include padding-bottom();
 @include padding-left();
 @include padding-right();
+@include padding-left-right();
+@include padding-top-bottom();
 @include margin();
 @include margin-top();
 @include margin-bottom();
 @include margin-left();
 @include margin-right();
-
+@include margin-left-right();
+@include margin-top-bottom();
 @include stretch(w);
 @include stretch(h);
 
