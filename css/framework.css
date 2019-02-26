@@ -364,6 +364,58 @@ html {
     grid-column: span 12;
   }
 }
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.ai-end {
+  align-items: end;
+}
+
+.a-self-end {
+  align-self: end;
+}
+
+.j-self-end {
+  justify-self: end;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
 .reset {
   margin: 0 !important;
   padding: 0 !important;

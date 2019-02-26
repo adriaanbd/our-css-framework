@@ -83,6 +83,63 @@ $quarter: 0.25rem;
 }
 // END GRID
 
+
+// LAYOUT AND ALIGNMENT 
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.jc-end {
+    justify-content: flex-end;
+}
+
+.ai-end {
+    align-items: end;
+}
+
+.a-self-end {
+    align-self: end;
+}
+
+.j-self-end {
+    justify-self: end;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+// END LAYOUT AND ALIGNMENT
+
+
 // UTILITY CLASSES
 
 .reset {
