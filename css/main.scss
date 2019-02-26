@@ -1,0 +1,363 @@
+html {
+    box-sizing: border-box;
+    font-family: -apple-system, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+// START Grid
+
+$quarter: 0.25rem;
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+@mixin gap() {
+    @for $i from 1 through 8 {
+        .gutters-#{$i} {
+            grid-gap: $i * $quarter;
+        } 
+    }
+}
+
+@mixin gap-col() {
+    @for $i from 1 through 8 {
+        .gutters-col-#{$i} {
+            grid-column-gap: $i * $quarter;
+        } 
+    }
+}
+
+@mixin gap-row() {
+    @for $i from 1 through 8 {
+        .gutters-row-#{$i} {
+            grid-row-gap: $i * $quarter;
+        } 
+    }
+}
+
+@include gap();
+@include gap-col();
+@include gap-row();
+
+.no-gutters {
+    grid-gap: 0 !important;
+}
+
+.no-col-gutters {
+    grid-column-gap: 0 !important;
+}
+
+.no-row-gutters {
+    grid-row-gap: 0 !important;
+}
+
+@mixin grid($property) {
+    @for $i from 1 through 12 {
+        .#{$property}-#{$i} {
+            grid-column: span $i;
+        }
+    }
+}
+
+@include grid(col);
+
+@media (min-width: 576px) {
+    @include grid(col-sm);
+}
+
+@media (min-width: 768px) {
+    @include grid(col-md);
+}
+
+@media (min-width: 992px) {
+    @include grid(col-lg);
+}
+
+@media (min-width: 1200px) {
+    @include grid(col-xl);
+}
+// END GRID
+
+
+// LAYOUT AND ALIGNMENT 
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.jc-end {
+    justify-content: flex-end;
+}
+
+.ai-end {
+    align-items: end;
+}
+
+.a-self-end {
+    align-self: end;
+}
+
+.j-self-end {
+    justify-self: end;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+// END LAYOUT AND ALIGNMENT
+
+
+// UTILITY CLASSES
+
+.reset {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@mixin stretch($property) {
+    @for $i from 1 through 4 {
+        .#{$property}-#{$i * 25} {
+            @if $property == w {width: #{$i * 25%};}
+            @else if $property == h {height: #{$i * 25%};}
+        }
+        
+    }
+}
+
+
+
+@mixin padding-left() {
+    @for $i from 1 through 10 {
+        .pl-#{$i} {
+            padding-left: $i * $quarter;
+        } 
+    }
+}
+
+@mixin padding-right() {
+    @for $i from 1 through 10 {
+        .pr-#{$i} {
+            padding-right: $i * $quarter;
+        } 
+    }
+}
+
+@mixin margin-left() {
+    @for $i from 1 through 10 {
+        .ml-#{$i} {
+            padding-left: $i * $quarter;
+        } 
+    }
+}
+
+@mixin margin-right() {
+    @for $i from 1 through 10 {
+        .mr-#{$i} {
+            padding-right: $i * $quarter;
+        } 
+    }
+}
+
+@include padding-left();
+@include padding-right();
+@include margin-left();
+@include margin-right();
+
+@include stretch(w);
+@include stretch(h);
+
+// START COLORS
+$red: #D50000;
+$blue: #0D47A1;
+$light-blue: #2196F3;
+$purple: #6600EE;
+$green: #00C853;
+$light-green: #01FF67;
+$yellow: #FFEA00;
+$orange: #E65100;
+$grey: #757575;
+$pink: #E91E63;
+$teal: #03DAC5;
+
+.red, .error {
+    color: $red;
+}
+
+.blue {
+    color: $blue;
+}
+
+.light-blue {
+    color: $light-blue;
+}
+
+.purple {
+    color: $purple;
+}
+
+.green {
+    color: $green;
+}
+
+.light-green, .success {
+    color: $light-green;
+}
+
+.yellow {
+    color: $yellow;
+}
+
+.orange {
+    color: $orange;
+}
+
+.pink {
+    color: $pink;
+}
+
+.teal {
+    color: $teal;
+}
+
+.grey {
+    color: $grey;
+}
+
+.red-bg, .alert-error {
+    background-color: $red;
+}
+
+.blue-bg {
+    background-color: $blue;
+}
+
+.light-blue-bg {
+    background-color: $light-blue;
+}
+
+.purple-bg {
+    background-color: $purple;
+}
+
+.green-bg {
+    background-color: $green;
+}
+
+.light-green-bg,
+.alert-success {
+    background-color: $light-green;
+}
+
+.yellow-bg {
+    background-color: $yellow;
+}
+
+.orange-bg {
+    background-color: $orange;
+}
+
+.pink-bg {
+    background-color: $pink;
+}
+
+.teal-bg {
+    background-color: $teal;
+}
+
+.grey-bg {
+    background-color: $grey;
+}
+// END COLORS
+
+
+// START FONT
+@mixin font-weight() {
+    @for $i from 1 through 9 {
+        .fw-#{$i * 100} {
+            font-weight: $i * 100;
+        }
+
+    }
+}
+
+@include font-weight();
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 500;
+}
+
+h1,
+.h1 {
+    font-size: 2.5rem;
+}
+
+h2,
+.h2 {
+    font-size: 2rem;
+}
+
+h3,
+.h3 {
+    font-size: 1.75rem;
+}
+
+h4,
+.h4 {
+    font-size: 1.5rem;
+}
+
+h5,
+.h5 {
+    font-size: 1.25rem;
+}
+
+h6,
+.h6 {
+    font-size: 1rem;
+}
+
+// END FONT
