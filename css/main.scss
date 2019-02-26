@@ -121,6 +121,22 @@ $quarter: 0.25rem;
     justify-content: center;
 }
 
+.jc-space-between {
+    justify-content: space-between;
+}
+
+.jc-space-around {
+    justify-content: space-around;
+}
+
+.ac-space-between {
+    align-content: space-between;
+}
+
+.ac-space-around {
+    align-content: space-around;
+}
+
 .ai-center {
     align-items: center;
 }
@@ -308,6 +324,14 @@ $teal: #03DAC5;
     color: $red;
 }
 
+.white {
+    color: #fff;
+}
+
+.black {
+    color: #000;
+}
+
 .blue {
     color: $blue;
 }
@@ -346,6 +370,14 @@ $teal: #03DAC5;
 
 .grey {
     color: $grey;
+}
+
+.black-bg {
+    background-color: #000;
+}
+
+.white-bg {
+    background-color: #fff;
 }
 
 .red-bg, .alert-error {
