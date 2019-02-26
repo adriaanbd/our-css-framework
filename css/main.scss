@@ -121,6 +121,22 @@ $quarter: 0.25rem;
     justify-content: center;
 }
 
+.jc-space-between {
+    justify-content: space-between;
+}
+
+.jc-space-around {
+    justify-content: space-around;
+}
+
+.ac-space-between {
+    align-content: space-between;
+}
+
+.ac-space-around {
+    align-content: space-around;
+}
+
 .ai-center {
     align-items: center;
 }
@@ -167,6 +183,14 @@ $quarter: 0.25rem;
     }
 }
 
+@mixin padding() {
+    @for $i from 1 through 10 {
+        .p-#{$i} {
+            padding: $i * $quarter;
+        } 
+    }
+}
+
 @mixin padding-right() {
     @for $i from 1 through 10 {
         .pr-#{$i} {
@@ -175,10 +199,68 @@ $quarter: 0.25rem;
     }
 }
 
+@mixin padding-top-bottom() {
+    @for $i from 1 through 10 {
+        .py-#{$i} {
+            padding-top: $i * $quarter;
+            padding-bottom: $i * $quarter;
+        } 
+    }
+}
+
+@mixin padding-left-right() {
+    @for $i from 1 through 10 {
+        .px-#{$i} {
+            padding-left: $i * $quarter;
+            padding-right: $i * $quarter;
+        } 
+    }
+}
+
+@mixin padding-bottom() {
+    @for $i from 1 through 10 {
+        .pb-#{$i} {
+            padding-bottom: $i * $quarter;
+        } 
+    }
+}
+
+@mixin padding-top() {
+    @for $i from 1 through 10 {
+        .pt-#{$i} {
+            padding-top: $i * $quarter;
+        } 
+    }
+}
+
+@mixin margin() {
+    @for $i from 1 through 10 {
+        .m-#{$i} {
+            margin: $i * $quarter;
+        } 
+    }
+}
+
+@mixin margin-top() {
+    @for $i from 1 through 10 {
+        .mt-#{$i} {
+            margin-top: $i * $quarter;
+        } 
+    }
+}
+
+@mixin margin-bottom() {
+    @for $i from 1 through 10 {
+        .mb-#{$i} {
+            margin-bottom: $i * $quarter;
+        } 
+    }
+}
+
 @mixin margin-left() {
     @for $i from 1 through 10 {
         .ml-#{$i} {
-            padding-left: $i * $quarter;
+            margin-left: $i * $quarter;
         } 
     }
 }
@@ -186,16 +268,42 @@ $quarter: 0.25rem;
 @mixin margin-right() {
     @for $i from 1 through 10 {
         .mr-#{$i} {
-            padding-right: $i * $quarter;
+            margin-right: $i * $quarter;
+        } 
+    }
+}
+@mixin margin-left-right() {
+    @for $i from 1 through 10 {
+        .mx-#{$i} {
+            margin-left: $i * $quarter;
+            margin-right: $i * $quarter;
         } 
     }
 }
 
+@mixin margin-top-bottom() {
+    @for $i from 1 through 10 {
+        .my-#{$i} {
+            margin-top: $i * $quarter;
+            margin-bottom: $i * $quarter;
+        } 
+    }
+}
+
+@include padding();
+@include padding-top();
+@include padding-bottom();
 @include padding-left();
 @include padding-right();
+@include padding-left-right();
+@include padding-top-bottom();
+@include margin();
+@include margin-top();
+@include margin-bottom();
 @include margin-left();
 @include margin-right();
-
+@include margin-left-right();
+@include margin-top-bottom();
 @include stretch(w);
 @include stretch(h);
 
@@ -214,6 +322,14 @@ $teal: #03DAC5;
 
 .red, .error {
     color: $red;
+}
+
+.white {
+    color: #fff;
+}
+
+.black {
+    color: #000;
 }
 
 .blue {
@@ -254,6 +370,14 @@ $teal: #03DAC5;
 
 .grey {
     color: $grey;
+}
+
+.black-bg {
+    background-color: #000;
+}
+
+.white-bg {
+    background-color: #fff;
 }
 
 .red-bg, .alert-error {
